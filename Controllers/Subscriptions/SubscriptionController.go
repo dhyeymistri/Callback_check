@@ -1,10 +1,10 @@
 package subscriptions
 
 import (
-	"fmt"
+	"encoding/json"
 	"net/http"
 )
 
 func NotifyNewSub(w http.ResponseWriter, r *http.Request) {
-	fmt.Print("NEW SUBSCRIPTION")
+	json.NewEncoder(w).Encode("New subscription made")
 }
